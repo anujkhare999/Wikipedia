@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>WikiLooks : correcting wiki one step at a time</title>
+<meta name="description" content="">
+<meta name="author" content="WikiLooks">
+<link rel="stylesheet" href="https://www.iitg.ac.in/cseweb/WikiFeedback/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://www.iitg.ac.in/cseweb/WikiFeedback/css/isotope.css" media="screen" />
+<link rel="stylesheet" href="https://www.iitg.ac.in/cseweb/WikiFeedback/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link href="https://www.iitg.ac.in/cseweb/WikiFeedback/css/animate.css" rel="stylesheet" media="screen">
+<link href="https://www.iitg.ac.in/cseweb/WikiFeedback/flexslider/flexslider.css" rel="stylesheet" />
+<link href="https://www.iitg.ac.in/cseweb/WikiFeedback/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.iitg.ac.in/cseweb/WikiFeedback/css/styles.css" />
+<link href="https://www.iitg.ac.in/cseweb/WikiFeedback/font/css/font-awesome.min.css" rel="stylesheet">
+
+<body>
+    <header class="header">
+      <div class="container ">
+        <nav class="navbar navbar-inverse " role="navigation" >
+          <div class="navbar-brand ">
+            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a href="#" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i>WikiLooks</i></b></a> </div>
+          <div id="main-nav" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav" id="mainNav">
+              <li class="active" id="firstLink"><a href="#home" class="scroll-link">Home</a></li>
+              <li><a href="#search" class="scroll-link">Search</a></li>
+              <li><a href="#services" class="scroll-link">How to use</a></li>
+              <li><a href="#aboutUs" class="scroll-link">The idea</a></li>
+              <li><a href="#plans" class="scroll-link">Current Structure</a></li>
+              <li><a href="#team" class="scroll-link">Future Plan</a></li>
+              <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div id="#top"></div>
+    <section id="home">
+      <div class="banner-container"> 
+            <div id="main-slider" class="flexslider">
+                <ul class="slides">
+                  <li>
+                    <img src="https://www.iitg.ac.in/cseweb/WikiFeedback/images/slides/1.jpg" alt="" />
+                    <div class="flex-caption container">
+                        <h1>Spelling Mistakes</h1> <p></p><p></p><p></p><p></p>
+                        <p>Example Page: Diatom (level-4 vital article in Biology) </p><p> Update: isoogamous -> isogamous</p> 
+                        <a href="https://en.wikipedia.org/w/index.php?title=Diatom&diff=prev&oldid=1027507937" class="btn btn-theme" target="_blank">See update here</a>
+                   </div>
+                  </li>
+                 <li>
+                    <img src="https://www.iitg.ac.in/cseweb/WikiFeedback/images/slides/3.jpg" alt="" />
+                    <div class="flex-caption container">
+                        <h1>Proper Name Correction</h1> <p></p><p></p><p></p><p></p>
+                        <p>Example Page: Oskar Kokoschka </p><p> Update: Enrich Heckel -> Erich Heckel</p> 
+                        <a href="https://en.wikipedia.org/w/index.php?title=Oskar_Kokoschka&diff=prev&oldid=1027502985" class="btn btn-theme" target="_blank">See update here</a>
+                   </div>
+                  </li>
+                   <li>
+                    <img src="https://www.iitg.ac.in/cseweb/WikiFeedback/images/slides/2.jpg" alt="" />
+                    <div class="flex-caption container">
+                        <h1>Grammatical Mistakes</h1> <p></p><p></p><p></p><p></p>
+                        <p>Example Page: Korean wave (Rated: High Importance) </p><p> Update: Girls Generation -> Girls' Generation</p> 
+                        <a href="https://en.wikipedia.org/w/index.php?title=Korean_wave&diff=prev&oldid=1027502679" class="btn btn-theme" target="_blank">See update here</a>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="https://www.iitg.ac.in/cseweb/WikiFeedback/images/slides/3.jpg" alt="" />
+                    <div class="flex-caption container">
+                        <h1>Improper symbol</h1> <p></p><p></p><p></p><p></p>
+                        <p>Example Page: Zhang Wentian (level-5 vital article) </p><p> Update: Yan’an -> Yan'an</p> 
+                        <a href="https://en.wikipedia.org/w/index.php?title=Zhang_Wentian&diff=prev&oldid=1027505117" class="btn btn-theme" target="_blank">See update here</a>	
+                    </div>
+                  </li>
+                </ul>
+            </div>
+      </div>
+      <div class="container" id="search">
+    <br>
+    <br><br>
+    <div class="form-group">
+        <label for="name">Please enter any entity name to check names used for : (press 'Enter' for extended list)</label>
+        <form method="GET" action="{% url 'imageDuplicates:search' %}">
+            <input type="text"  class="form-control" name="query" id="search" placeholder="Enter Entity Name" 
+            title="Please enter any entity name to check names used for :">
+        </form> 
+    <br>
+    <div style="height:100%";><div id="txtHint" style="height: 100%; "><b> </b></div></div><br><br>            
+    </div>
+    </div>
+    </section>
+    </section>
+    
+    <section id="services" class="page-section colord">
+      <div class="container">
+     <h2><center><font color="sky blue"> How to Use Voting Portal? </font></center></h2>
+        <div class="row"> 
+          <div class="col-md-3 text-center"><div class="b1"> <i class="circle"><img src="https://www.iitg.ac.in/cseweb/WikiFeedback/images/a1.jpg" alt="" /></i>
+            <h3>Search for any Entity</h3>
+            <p>Search for any entity you have knowledge/interest in. Start typing to see list of entities superstring to current input. Choose from about <b>6 million (en)</b> entities across entire Wikipedia.</p>
+          </div></div>
+          <div class="col-md-3 text-center"><div class="b1"><i class="circle"> <img src="https://www.iitg.ac.in/cseweb/WikiFeedback/images/a2.jpg" alt="" /></i>
+            <h3>Pick an Surface Name</h3>
+            <p>The landing page shows correct surface names as well as incorrect surface names for used all across Wikipedia for the selected entity. Pick incorrect surface name to proceed.</p>
+          </div></div>
+          <div class="col-md-3 text-center"><div class="b1"><i class="circle"> <img src="https://www.iitg.ac.in/cseweb/WikiFeedback/images/a3.jpg" alt="" /></i>
+            <h3>Decide</h3>
+            <p>View the mention sentence or visit the Wikipedia source page to understand reference and decide if the selected surface name is indeed incorrect. If yes, what can be a correct replacement.</p>
+          </div></div>
+          <div class="col-md-3 text-center"><div class="b1"><i class="circle"> <img src="https://www.iitg.ac.in/cseweb/WikiFeedback/images/a4.jpg" alt="" /></i>
+            <h3>Vote</h3>
+            <p>Vote, based on observation, whether the mention surface name is incorrect or not. In case of incorrect, further vote for a proper replacement. The replacements doesn't need to be case-sensitive.</p>
+          </div></div>
+        </div>
+      </div>
+    </section>
+    <section id="aboutUs">
+      <div class="container">
+        <div class="heading text-center"> 
+          <h2>The Project</h2>
+          <p> We made an attempt to automate the process of identifying the incorrect surface
+    names, and classify them into different kinds. We came up with a general heuristic on
+    classification of correct and incorrect, and at the same time suggested corrections based on
+    Edit-Distance and Superstring Substring heuristic.</p>
+        </div>
+        <div class="row feature design">
+          <div class="area1 columns right">
+            <h3>Methodology</h3>
+            <p align="justify">We use frequency and Edit-Distance measures to classify and
+    label the surface names. The different kinds of errors existing in surface names are typing
+    errors, incorrect entity, vandalism. After classification, we find appropriate replacements
+    for the incorrect surface names, by replacing them with our suggested candidate correct
+    surface names. For analysing the quality of the corrections, we developed a web portal for
+    users to manually check the suggested corrections for wrong surface names, and develop a
+    Wikipedia bot to automate the process. The bot pushes all updates once everyday. </p>
+              <a href="#" class="btn">Read more</a> 
+          </div>
+          <div class="area2 columns feature-media left"> <img src="https://www.iitg.ac.in/cseweb/WikiFeedback/images/feature-img-1.png" alt="" width="100%"> </div>
+        </div>
+        
+        </div>
+        
+    </section>
+    <hr>
+    <section id="plans" class="page-section">
+      <div class="container">
+        <div class="heading text-center"> 
+          <h2>Current Structure</h2>
+          </div>
+    <p align = "justify">
+    <ul>
+    <li>The dataset with incorrect surface names is hosted in MySQL</li>
+    <li>Users can login via Google account and vote for each mention</li>
+    <li>Each mention with more than 10 votes or 2 admin votes is pushed to Wikipedia via Bot</li>
+    <li>The Bot makes automatic Case-Sensitive updates with suggested replacements to Wikipedia page</li>
+    </ul>
+    </p>
+    </div>
+    </section>
+    
+    <section id="team" class="page-section">
+      <div class="container">
+        <div class="heading text-center"> 
+          <h2>Future Plan</h2>
+          <p>{Will be updated soon}</p>
+        </div>
+        
+      </div> 
+    </section>
+    <section id="contactUs" class="contact-parlex">
+      <div class="parlex-back">
+        <div class="container">
+          <div class="row">
+            <div class="heading text-center"> 
+              <h2>Contact Us</h2>
+              </div>
+          </div>
+          <div class="row mrgn30">
+            <form method="post" action="" id="contactfrm" role="form">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address">
+                </div>
+                <div class="form-group">
+                  <label for="comments">Comments</label>
+                  <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
+                  <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+                </div>
+                <div class="result"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
+    </body>
+    </html>

@@ -1,0 +1,12 @@
+cat,https://fosterpetoutreach.org/wp-content/uploads/2020/05/cats.jpg,method1
+cat,https://i.natgeofe.com/n/f0dccaca-174b-48a5-b944-9bcddf913645/01-cat-questions-nationalgeographic_1228126.jpg,method2
+cat,https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png,method3
+cat,https://cdn.britannica.com/22/206222-131-E921E1FB/Domestic-feline-tabby-cat.jpg,method4
+dog,https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg,method1
+dog,https://www.cesarsway.com/wp-content/uploads/2020/08/Screen-Shot-2020-08-28-at-7.54.31-AM.png,method2
+dog,https://thumbs-prod.si-cdn.com/Q70MTW0QP4g7kpVoyG3xQn57tQI=/800x600/filters:no_upscale()/https://public-media.si-cdn.com/filer/ad/7b/ad7b3860-ad5f-43dc-800e-af57830cd1d3/labrador.jpg,method3
+car,https://i.pinimg.com/originals/c9/eb/1c/c9eb1cebc2bb9d37d1e1d499bf2c9478.jpg,method1
+car,https://www.focus2move.com/wp-content/uploads/2020/08/Tesla-Roadster-2020-1024-03.jpg,method2
+car,https://media-cldnry.s-nbcnews.com/image/upload/newscms/2018_12/2371046/180320-flying-car-aeromobil50-se-143p.jpg,method3
+car,https://miro.medium.com/max/1838/1*abdX1YajAUt-3rH21_leqA.jpeg,method4
+car,https://cdn.geekwire.com/wp-content/uploads/2020/01/20200108_CES_603.jpg,method5
