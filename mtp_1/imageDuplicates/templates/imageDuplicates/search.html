@@ -22,58 +22,63 @@
     <link rel="stylesheet" href="https://www.iitg.ac.in/cseweb/WikiFeedback/css/styles.css" />
     <link href="https://www.iitg.ac.in/cseweb/WikiFeedback/font/css/font-awesome.min.css" rel="stylesheet">
     <style>
+        .ok2 {
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1500px;
+            font-style: bold;
+            color: black;
+            font-family: Arial;
+        }
         .a1{
             color: black;
-            font-size: 30px;
+            font-size: 20px;
         }
         body{
-            background: white url("/static/imageDuplicates/images/background.jpeg");
-        }
-        .bg{
-            margin-left: 30%;
+            background-image:  url('/static/imageDuplicates/images/pngegg.png'),url('/static/imageDuplicates/images/9.jpg');
+            background-repeat: no-repeat, repeat;
+            stroke-width: 100%;
+            background-size: cover;
         }
         .align{
-            margin-top: 3%;
-            margin-left: 5%;
+            margin-top: 1%;
+            margin-left: 6%;
+            color: aliceblue;
+            padding-top: 80px;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container ">
-          <nav class="navbar navbar-inverse " role="navigation" >
-            <div class="navbar-brand ">
-              <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-              <a href="#" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i>WikiLooks</i></b></a> </div>
-            <div id="main-nav" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav" id="mainNav">
-                <li class="active" id="firstLink"><a href="#home" class="scroll-link">Home</a></li>
-                <li><a href="#search" class="scroll-link">Search</a></li>
-                <li><a href="#services" class="scroll-link">How to use</a></li>
-                <li><a href="#aboutUs" class="scroll-link">The idea</a></li>
-                <li><a href="#plans" class="scroll-link">Current Structure</a></li>
-                <li><a href="#team" class="scroll-link">Future Plan</a></li>
-                <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
-              </ul>
-            </div>
-          </nav>
+  <header class="header"  >
+    <div class="container " style="height: 70px !important; background-color: rgb(39, 38, 38);  height: 60px; border-radius: 15px 40px; ">
+      <nav class="navbar navbar-inverse " role="navigation" >
+        <div class="navbar-brand " >
+          <!-- <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> -->
+          <a href="#" class="navbar-nav animated bounceInLeft logo  "><b><i>WikiLooks</i></b></a> </div>
+        <div id="main-nav" class="collapse navbar-collapse" >
+          <ul class="nav navbar-nav" id="mainNav" >
+            <li style="padding-right: 2px;"  id="firstLink"><a href="{% url 'imageDuplicates:index2'  %}" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Home</a></li>
+            <li style="padding-right: 2px;"><a href="#search" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Search</a></li>
+            <li style="padding-right: 2px;"> <a href="#services" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">How to use</a></li>
+            <li style="padding-right: 2px;"><a href="#aboutUs" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">The idea</a></li>
+            <li style="padding-right: 2px;"><a href="#plans" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Current Structure</a></li>
+            <li style="padding-right: 2px;"><a href="#team" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Future Plan</a></li>
+            <li style="padding-right: 2px;"><a href="#contactUs" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Contact Us</a></li>
+          </ul>
         </div>
-      </header>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <!-- Links -->
-        <ul class="navbar-nav ">
-          <li class="nav-item active ">
-            <a class="nav-link" href="{% url 'imageDuplicates:index2' %}">Home</a>
-          </li>
-        </ul>
-    </nav> 
-    <div class="container-lg p-3 my-3 bg-dark text-white ">
-        <h1 class="bg-light text-dark "><p class="bg">All related Queries </p></h1>
+      </nav>
     </div>
+  </header>
+    <div  style="padding-top: 110px;">
+        <h1 class="ok2 " style="color: rgb(255, 255, 255); background-color: rgb(39, 38, 38); border-radius: 15px 15px 15px 15px; width: 25%;">All related Queries </h1>
+    </div>
+    <div >
     {% if allEntity %}
-        <ul class="align">
+        <ul class="align" >
             {% for question in allEntity %}
-                <li>
+                <li style="font-style: italic; font-size: larger;  background-color: rgb(205, 216, 152); width: max-content; border-radius: 5px 15px 5px 5px;">
                     <a class="a1" href="{% url 'imageDuplicates:detail' pk=question.entityId %}" >{{question.entityName}}</a>
                 </li>
             {% endfor %}    
@@ -81,6 +86,7 @@
     {% else %} 
         <p> No options are available.</p>
     {% endif %} 
+  </div>
 </body>
 </html>
 

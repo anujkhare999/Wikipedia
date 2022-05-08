@@ -35,15 +35,15 @@ class IndexView(generic.ListView):
 #         return HttpResponseRedirect(reverse('imageDuplicates:results',args=(question.id,)))
 
 def DetailView(request,pk):
-    correct=entitySurfaceNames_hi.objects.select_related().filter(entityId=pk,label=0)
-    wrong=entitySurfaceNames_hi.objects.select_related().filter(entityId=pk,label=1)
+    correct=entitySurfaceNames_hi.objects.select_related().filter(entityId=pk,label=1)
+    wrong=entitySurfaceNames_hi.objects.select_related().filter(entityId=pk,label=0)
     # correct = entitySurfaceNames_hi.objects.select_related('surfaceNames_hi', 'Entity_hi').filter(entityId=1)
     context={'correct':correct, 'wrong':wrong}
     return render(request,"imageDuplicates/detail.html",context)
 
 def search(request):
     query = request.GET['query']
-    allEntity = Entity_hi.objects.filter(entityName__icontains=query)
+    allEntity = Entity_hi.objects.filter(entityName__startswith=query)[:500]
     context = {'allEntity':allEntity}
     return render(request,"imageDuplicates/search.html",context)
     # return HttpResponse("this is my search page")

@@ -23,95 +23,33 @@
     <link href="https://www.iitg.ac.in/cseweb/WikiFeedback/font/css/font-awesome.min.css" rel="stylesheet">
 
     <style>
-        .ok{
-            display: inline-flex;
-            z-index: 1;
-            margin-left: 40%;
-            margin-right: 5px;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            padding: 15px;
-            width:20%;
-            max-height: 350px;
-            min-width: 100px;
-            background-color: rgb(62, 65, 65);
-            z-index: 1;
-        }
-        .types_images{
-            display: inline-flex;
-            z-index: 1;
-            margin-left: 5px;
-            margin-right: 5px;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            margin: 10px;
-            padding: 15px;
-            width:22%;
-            max-height: 350px;
-            min-width: 120px;
-            background-color: rgb(62, 65, 65);
-            z-index: 1;
-        }
         .ok2 {
             display: flex;
             justify-content: center;
             margin-left: auto;
             margin-right: auto;
             max-width: 1500px;
-        }
-        /* body{
-            background: white url("/static/imageDuplicates/images/background.jpeg");
-        } */
-        .alignment{
-            margin-left: 5%;
-        }
-        .alignment2{
-            margin-left: 50%;
-            margin-bottom: 2%;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            }
-
-        table, td, th {
-            border: 1px solid black;
-            padding: 5px;
-            }
-
-
-        iframe {
-                width: 50%;
-                display: block;
-                border-style:none;
-            }
-
-        th {
-            text-align: left;
+            font-style: bold;
+            color: black;
+            font-family: Arial;
         }
         .align{
-            margin-left: 5%;
+            color: aliceblue;
+            margin-left: 10%;
             font-style: italic;
             font-size: xx-large;
+            justify-content: center;
         }
         .a1{
             color: green;
             font-size: 30px;
-        }
-        .a2{
-            color: red;
-            font-size: 30px;
-            margin-left: 5%;
         }
         .a3{
             color: red;
             font-size: 30px;
         }
         .row{
-            margin-top: 130px;
+            margin-top: 140px;
             height: 400px;
             padding-bottom: 50px;
         }
@@ -120,72 +58,71 @@
             background-repeat: no-repeat, repeat;
             background-size: cover;
             stroke-width: 100%;
+            background-position: center;
         }
     </style>
 </head>
+
 <script>  
     function lowFreq() {
          alert("Predicted incorrect Surface Names for this Entity have already been corrected(or removed) on Wikipedia. Please choose other Entity");
         window.top.history.back()
     };
 </script>
+
 <body>  
-    <header class="header">
-        <div class="container ">
+    <header class="header"  >
+        <div class="container " style="height: 70px !important; background-color: rgb(39, 38, 38);  height: 60px; border-radius: 15px 40px; ">
           <nav class="navbar navbar-inverse " role="navigation" >
-            <div class="navbar-brand ">
-              <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-              <a href="#" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i>WikiLooks</i></b></a> </div>
-            <div id="main-nav" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav" id="mainNav">
-                <li class="active" id="firstLink"><a href="{% url 'imageDuplicates:index2'  %}" class="scroll-link">Home</a></li>
-                <li><a href="#search" class="scroll-link">Search</a></li>
-                <li><a href="#services" class="scroll-link">How to use</a></li>
-                <li><a href="#aboutUs" class="scroll-link">The idea</a></li>
-                <li><a href="#plans" class="scroll-link">Current Structure</a></li>
-                <li><a href="#team" class="scroll-link">Future Plan</a></li>
-                <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+            <div class="navbar-brand " >
+              <!-- <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> -->
+              <a href="#" class="navbar-nav animated bounceInLeft logo  "><b><i>WikiLooks</i></b></a> </div>
+            <div id="main-nav" class="collapse navbar-collapse" >
+              <ul class="nav navbar-nav" id="mainNav" >
+                <li style="padding-right: 2px;"  id="firstLink"><a href="{% url 'imageDuplicates:index2'  %}" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Home</a></li>
+                <li style="padding-right: 2px;"><a href="#search" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Search</a></li>
+                <li style="padding-right: 2px;"> <a href="#services" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">How to use</a></li>
+                <li style="padding-right: 2px;"><a href="#aboutUs" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">The idea</a></li>
+                <li style="padding-right: 2px;"><a href="#plans" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Current Structure</a></li>
+                <li style="padding-right: 2px;"><a href="#team" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Future Plan</a></li>
+                <li style="padding-right: 2px;"><a href="#contactUs" class="scroll-link" style="background-image: url(/static/imageDuplicates/images/11.jpg);">Contact Us</a></li>
               </ul>
             </div>
           </nav>
         </div>
     </header>
-    <div style="padding-top: 120px;">
+
+    <div style="padding-top: 130px;">
         {% if wrong %}
-            {% for q in wrong %}
-                <h1 class="ok2"> Surface Names of  "{{q.entityId.entityName}}" Entity </h1>
-            {% endfor %}
+            <h1 class="ok2" style="color: rgb(255, 255, 255); background-color: rgb(39, 38, 38); border-radius: 15px 15px 15px 15px; width: 40%;"> Surface Names of  "{{wrong.0.entityId.entityName}}" Entity </h1>
         {% endif %}
     </div>
+
     <div class="row"  >
-        <div class="col-sm-5" style="background-image: url('/static/imageDuplicates/images/12.jpg'); border-radius: 15px 50px; margin-left: 70px;">
-            {% if wrong %}
-            <h3 class="align" >correct Surface Names are</h3>
-            <ul >
-                {% for q in wrong %}
-                <li class="align">
-                    <a class="a1" href="{% url 'imageDuplicates:index2'  %}" >{{q.surfaceNamesId.surfaceName}}</a>
-                </li>
-                {% endfor %} 
-            </ul>
-        </div>
-        <div class="col-sm-5" style="background-image: url('/static/imageDuplicates/images/12.jpg'); border-radius: 50px 15px ; margin-left: 80px;">
-            <h3 class="align"> wrong surface Names are</h3>
-            <ul>
-                {% for q in correct %}
-                <li class="align">
-                    <a  class="a3" href="{% url 'imageDuplicates:vote' pk1=q.entityId.entityId pk2=q.surfaceNamesId.surfaceNamesId  %}" >{{q.surfaceNamesId.surfaceName}}</a>
-                </li>
-                {% endfor %}
-            </ul>
-            {% else %} 
+        {% if wrong %}
+            <div class="col-sm-5" style="background-image: url('/static/imageDuplicates/images/12.jpg'); border-radius: 15px 50px; margin-left: 70px;">
+                <h1 class="align" >Correct Surface Names</h1>
+                    <ul >
+                        {% for q in correct %}
+                        <li class="align">
+                            <a class="a1"  >{{q.surfaceNamesId.surfaceName}}</a>
+                        </li>
+                        {% endfor %} 
+                    </ul>
+            </div>
+            <div class="col-sm-5" style="background-image: url('/static/imageDuplicates/images/12.jpg'); border-radius: 15px 50px ; margin-left: 80px;">
+                <h3 class="align"> Wrong Surface Names </h3>
+                    <ul>
+                        {% for q in wrong %}
+                        <li class="align">
+                            <a  class="a3" href="{% url 'imageDuplicates:vote' pk1=q.entityId.entityId pk2=q.surfaceNamesId.surfaceNamesId  %}" >{{q.surfaceNamesId.surfaceName}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+            </div>
+        {% else %}
             <script type="text/javascript"> lowFreq(); </script>
-            {% endif %}
-        </div>
-    </div>
-    <div>
-            <iframe  style="background-image: url('/static/imageDuplicates/images/12.jpg'); border-radius: 50px 15px ; " > </iframe>       
-            <iframe  style="background-image: url('/static/imageDuplicates/images/12.jpg'); border-radius: 50px 15px ; " > </iframe>
+        {% endif %}
     </div>
 </body>
 </html>

@@ -43,7 +43,7 @@ class entitySurfaceNames_hi(models.Model):
     label = models.BigIntegerField(blank=True, null=True)
     class Meta:
         managed = False
-        db_table = 'entitySurfaceNames_hi'
+        db_table = 'entitySurfaceNames_hi2'
         unique_together = (('entityId', 'surfaceNamesId'),)
     
     def __str__(self):
